@@ -1,0 +1,27 @@
+body {
+  background-color: greenyellow;
+}
+
+.g-item {
+  border: 3px solid black;
+  padding: 10px;
+}
+
+.g-container {
+  display: grid;
+  grid-template-columns: 150px 250px;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+}
+
+.g-item-1 {
+}
+
+.g-item-2 {
+}
+
+.g-item-3 {
+}
+
+.g-item-4 {
+}

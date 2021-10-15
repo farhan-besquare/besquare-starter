@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bold;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  width: calc(100% - 20px);
+  height: 60px;
+  padding: 0 10px;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.app-logo {
+  font-size: 32px;
+}
+
+.menu > button {
+  background-color: cadetblue;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.main-content {
+  background-color: rgb(247, 247, 247);
+  height: 100vh;
+}
+
+.score-box {
+  background-color: black;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 100px;
+  padding-left: 40px;
+  border-radius: 0.6rem;
+  font-size: 40px;
+  box-shadow: 0 2px 10px 1px #cccccc;
+}
+
+#score {
+  background-color: rgb(199, 38, 151);
+  height: 100%;
+  width: 50%;
+  border-end-end-radius: 0.6rem;
+  border-start-end-radius: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  justify-content: center;
+}
+
+#end {
+  visibility: hidden;
+}
+
+#timer {
+  width: 320px;
+  height: 100px;
+  background-color: white;
+  border-radius: 0.6rem;
+  margin-left: 2rem;
+  box-shadow: 0 2px 10px 1px #cccccc;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+}
+
+.target-box {
+  margin: 50px 5% 50px 5%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 18rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 10px 1px #cccccc;
+}
+
+.target-box > .target-card {
+  margin: 0 10px 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 10rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 10px 1px #cccccc;
+  font-size: 50px;
+}
+
+.data-display {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.key-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 5% 0 5%;
+  flex-wrap: wrap;
+}
+
+.key-card {
+  height: 16vh;
+  width: 10vw;
+  margin: 0 10px 0 10px;
+  text-align: center;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  box-shadow: 0 2px 10px 1px #cccccc;
+}
+
+.key-card > .header {
+  height: 8vh;
+  background-color: black;
+  color: white;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.key-card > .content {
+  height: 8vh;
+  background-color: white;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.target-card.correct {
+  box-shadow: 0 1px 10px 1px #169716;
+}
+
+.target-card.wrong {
+  box-shadow: 0 1px 10px 1px #ff5959;
+}
+
+.target-card.timeout {
+  box-shadow: 0 1px 10px 1px #ffae00;
+}
+
+.target-card.active {
+  margin: 0 10px 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 12rem;
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 10px 10px #cccccc;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 319px) {
+  .key-card > .header {
+    font-size: 10vw;
+  }
+  .key-card > .content {
+    font-size: 5vw;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .key-card > .header {
+    font-size: 20px;
+  }
+  .key-card > .content {
+    font-size: 10px;
+  }
+  .target-box,
+  .target-card,
+  .target-card.active {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .key-card > .header {
+    font-size: 30px;
+  }
+  .key-card > .content {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .key-card > .header {
+    font-size: 40px;
+  }
+  .key-card > .content {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .key-card > .header {
+    font-size: 40px;
+  }
+  .key-card > .content {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .key-card > .header {
+    font-size: 50px;
+  }
+  .key-card > .content {
+    font-size: 25px;
+  }
+}
